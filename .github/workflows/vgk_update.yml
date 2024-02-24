@@ -16,7 +16,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install sportradar ast
+        pip install sportradar
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run main.py
       env:
