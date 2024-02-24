@@ -1,8 +1,10 @@
 from sportradar import NHL
 import ast
+import os
 
+API_KEY = os.environ["API_KEY"]
 VGK_ID = "42376e1c-6da8-461e-9443-cfcf0a9fcc4d"
-sr = NHL.NHL("API_KEY")
+sr = NHL.NHL(API_KEY)
 
 def get_team_content(team_id)->dict:
     byte_response = sr.get_team_profile___roster(team_id).content
